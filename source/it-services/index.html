@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Custom style  -->
+    <link rel="stylesheet" href="../../node_modules/angular-ui-switch/angular-ui-switch.min.css"/>
     <link rel="stylesheet" href="style/default.css"/>
 
     <!-- Modernizr JS -->
@@ -69,13 +70,12 @@
                 </div>
                 <div class="col-xs-8 text-center menu-1">
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="index.html" data-translate>home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li class="has-dropdown">
                             <a href="services.html">Services</a>
                             <ul class="dropdown">
-                                <li><a href="#">Web Design</a></li>
-                                <li><a href="#">eCommerce</a></li>
+                                <li><a href="#">webDesign</a></li>
                                 <li><a href="#">Branding</a></li>
                                 <li><a href="#">API</a></li>
                             </ul>
@@ -95,6 +95,9 @@
                 <div class="col-xs-2 text-right hidden-xs menu-2">
                     <ul>
                         <li class="btn-cta"><a href="#" data-ng-click="$ctrl.toggleLanguage()"><span>Login</span></a>
+                        </li>
+                        <li>
+                            <switch name="yesNo" ng-model="yesNo" on="lorem" off="ipsum" class="wide"></switch>
                         </li>
                     </ul>
                 </div>

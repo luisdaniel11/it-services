@@ -12,6 +12,7 @@ import "angular/node_modules/angular-translate/dist/angular-translate-loader-sta
 import "angular/node_modules/angular-route/angular-route";
 import "angular/node_modules/angular-cookies/angular-cookies";
 import "angular/node_modules/angular-local-storage/dist/angular-local-storage";
+import "angular/node_modules/angular-ui-switch/angular-ui-switch";
 
 const MID = "it-services-ui";
 
@@ -21,7 +22,8 @@ const MODULE = angular.module(MID, [
     'ngRoute',
     'ngCookies',
     'pascalprecht.translate',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'uiSwitch'
 ]);
 
 // iterates through all exported configs and register them

@@ -30,10 +30,14 @@
     "angular-route": "^1.5.8",
     "angular-sanitize": "^1.5.8",
     "angular-translate": "^2.13.0",
+    "angular-ui-switch": "^0.1.1",
     "dojo": "^1.11.2",
-    "moment": "^2.16.0"
+    "moment": "^2.16.0",
+    "angular-ui-swich": "0.1.1"
+
   },
   "devDependencies": {
+    "bower": "^1.7.7",
     "amd-optimize": "^0.6.1",
     "angular-mocks": "^1.5.8",
     "babel-core": "^6.18.2",
