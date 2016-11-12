@@ -57,7 +57,7 @@
     <![endif]-->
 
 </head>
-<body data-ng-controller="MainController">
+<body data-ng-controller="MainController as $ctrl">
 <div class="gtco-loader"></div>
 
 <div id="page">
@@ -94,7 +94,8 @@
                 </div>
                 <div class="col-xs-2 text-right hidden-xs menu-2">
                     <ul>
-                        <li class="btn-cta"><a href="#"><span>Login</span></a></li>
+                        <li class="btn-cta"><a href="#" data-ng-click="$ctrl.toggleLanguage()"><span>Login</span></a>
+                        </li>
                     </ul>
                 </div>
             </div>
