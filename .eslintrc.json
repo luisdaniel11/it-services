@@ -1,0 +1,28 @@
+{
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "amd": true,
+        "jasmine": true
+    },
+    "rules": {
+        "semi": "warn",
+        "no-console": "off",
+        "no-unused-vars": "warn"
+    },
+    "globals": {
+        "process": true,
+        "__dirname": true,
+        "global": true,
+        "module": true,
+        "exports": true,
+        "babelHelpers": true,
+        "globalConfig": true,
+        "angular": true
+    }
+}
