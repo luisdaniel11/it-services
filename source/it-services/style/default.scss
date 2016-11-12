@@ -1,7 +1,14 @@
 @media screen, projection {
-
+  $font-primary: 'Work Sans', Arial, sans-serif;
   body {
-
+    .switch {
+      .switch-text{
+        font-family: $font-primary;
+      }
+      .on{
+        top:18%
+      }
+    }
   }
 }
 
