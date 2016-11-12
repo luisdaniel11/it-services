@@ -6,6 +6,8 @@ const paths = {
         sass: 'source/**/style/*.scss',
         statics: [
             'source/**/images/*.*',
+            'source/**/css/*.*',
+            'source/**/fonts/**/*.*',
             'source/**/i18n/*.*',
             'source/*/*.html'
         ],

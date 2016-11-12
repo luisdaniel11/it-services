@@ -96,7 +96,7 @@ gulp.task('watch-dev', ["default"], () => gulp.watch("source/**/*", ["default"])
 
 gulp.task("default", ["clean", "js", "sass", "statics"]);
 
-//Teller Services(ìts)
+//IT Services(ìts)
 gulp.task("ìts:js", () => buildJS(paths.src.ìts.js, paths.dist.ìts.js));
 gulp.task('ìts:sass', () => buildSass(paths.src.ìts.sass, paths.dist.ìts.sass));
 gulp.task('ìts:html', () => moveStaticFiles(paths.src.ìts.html, paths.dist.ìts.html));

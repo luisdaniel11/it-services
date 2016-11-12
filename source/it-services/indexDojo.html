@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title ng-bind="title">
+        IT Services
+    </title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="style/default.css"/>
+    <base href="">
+</head>
+
+<body id="_body">
+<div class="bootstrap-layout">
+    <div class="container">
+        <landing-page></landing-page>
+    </div>
+</div>
+<script>
+    var globalConfig = {paths: {}};
+
+    var dojoConfig = {
+        paths: {
+            "angular/dist": "../../dist/it-services",
+            "angular/node_modules": "../../node_modules"
+        },
+        callback: function () {
+
+            require(["angular/dist/index", "dojo/domReady!"], function (index) {
+                angular.bootstrap(document.body, [index.name]);
+            });
+        }
+    };
+</script>
+<script src="../../node_modules/angular/angular.js"></script>
+<script src="../../lib/babel-helpers.js"></script>
+<script src="../../node_modules/dojo/dojo.js"></script>
+</body>
+</html>
