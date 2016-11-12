@@ -94,10 +94,10 @@
                 </div>
                 <div class="col-xs-2 text-right hidden-xs menu-2">
                     <ul>
-                        <li class="btn-cta"><a href="#" data-ng-click="$ctrl.toggleLanguage()"><span>Login</span></a>
+                        <li class="btn-cta"><a href="#"><span>Login</span></a>
                         </li>
                         <li>
-                            <switch name="yesNo" ng-model="yesNo" on="lorem" off="ipsum" class="wide"></switch>
+                            <switch name="yesNo" ng-model="$ctrl.yesNo" ng-change="$ctrl.toggleLanguage()" on="lorem" off="ipsum" class="wide"></switch>
                         </li>
                     </ul>
                 </div>

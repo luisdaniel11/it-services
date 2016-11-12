@@ -1,4 +1,10 @@
 {
   "title": "It Services",
-  "getStarted": "Get Started"
+  "getStarted": "Get Started" ,
+  "home": "Home",
+  "About": "About",
+  "Services": "Services",
+  "webDesign": "Web Design",
+  "Branding": "Branding",
+  "Services": "Services"
 }
