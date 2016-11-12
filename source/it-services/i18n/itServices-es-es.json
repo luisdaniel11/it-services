@@ -1,4 +1,9 @@
 {
   "title": "It Servicios",
-  "getStarted": "Comenzar"
+  "getStarted": "Comenzar",
+  "home": "Inicio",
+  "about": "Acerca de",
+  "services": "Servicios",
+  "tools": "Herramientas",
+  "contact": "Contáctenos"
 }
