@@ -4,11 +4,14 @@ import * as components from './all.component';
 import * as directives from './all.directive';
 import * as services from './all.service';
 import * as filters from './all.filters';
+import MainController from './config/MainController';
 
 import "angular/node_modules/angular-translate/dist/angular-translate";
 import "angular/node_modules/angular-sanitize/angular-sanitize";
 import "angular/node_modules/angular-translate/dist/angular-translate-loader-static-files/angular-translate-loader-static-files";
 import "angular/node_modules/angular-route/angular-route";
+import "angular/node_modules/angular-cookies/angular-cookies";
+import "angular/node_modules/angular-local-storage/dist/angular-local-storage";
 
 const MID = "it-services-ui";
 
@@ -16,7 +19,9 @@ const MID = "it-services-ui";
 const MODULE = angular.module(MID, [
     'ngSanitize',
     'ngRoute',
-    'pascalprecht.translate'
+    'ngCookies',
+    'pascalprecht.translate',
+    'LocalStorageModule'
 ]);
 
 // iterates through all exported configs and register them
@@ -48,5 +53,8 @@ for (let id in directives) {
 for (let id in filters) {
     MODULE.filter(id, filters[id]);
 }
+
+//Init main controller
+MODULE.controller('MainController', MainController);
 
 export default MODULE;

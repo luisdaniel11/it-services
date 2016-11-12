@@ -6,7 +6,6 @@ function translateConfig($translateProvider, config) {
         }]
     });
     $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
-    $translateProvider.preferredLanguage('en');
 }
 
 translateConfig.$inject = ["$translateProvider", "serviceConfig"];
