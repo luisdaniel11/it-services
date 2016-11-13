@@ -7,6 +7,18 @@
   "tools": "Tools",
   "contact": "Contact",
   "english": "ENGLISH",
-  "spanish": "SPANISH"
+  "spanish": "SPANISH",
+  "HTML5": "HTML5",
+  "CSS3": "CSS3",
+  "Sass": "Sass",
+  "angular": "Angular JS",
+  "dojo": "Dojo",
+  "node": "Node JS",
+  "spring": "Spring Framework",
+  "net": ".Net",
+  "copyRight": "&copy; 2016 Scan employees. All Rights Reserved.",
+  "eCommerce": "Smart marketing plans hit consumers where they are, which in most cases, is online. From websites to interactive tools, our team – spanning creative to engineering – completely reimagines your online presence and rebuilds it to drive business.",
+  "eCommerce2": "Multidimensional challenges need a multidisciplinary approach. Gain access to a team who works to solve tough problems across all avenues of business, using everything from brand strategy and advertising to data analysis and attribution.",
+  "ourServices": "Our services is a collection of smart, creative individuals who shape brands and build technology so that we can help good companies solve hard problems. We have a passion for digital, a devotion to understanding human behavior, and a knack for designing beautiful customer experiences."
 
 }
