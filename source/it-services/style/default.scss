@@ -1,16 +1,28 @@
 @media screen, projection {
   $font-primary: 'Work Sans', Arial, sans-serif;
+  $appGreen: #50cda9;
+  $appBlue: #69B9DE;
   body {
     .switch {
-      .switch-text{
+      background: $appBlue;
+      border-color: $appBlue;
+      .switch-text {
         font-family: $font-primary;
       }
-      .on, .off{
-        top:18%
+      .on, .off {
+        top: 18%;
+        color: #fff;
       }
     }
-    .switch.wide.checked small{
-      left: 72px
+    .switch.wide.checked {
+      small {
+
+        left: 72px
+      }
+    }
+    .switch.checked {
+      background: $appGreen;
+      border-color: $appGreen;
     }
     .switch.wide {
       width: 102px;
