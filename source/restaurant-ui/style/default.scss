@@ -1,0 +1,23 @@
+@media screen, projection {
+  $font-primary: 'Work Sans', Arial, sans-serif;
+  body {
+    .switch {
+      .switch-text{
+        font-family: $font-primary;
+      }
+      .on, .off{
+        top:18%
+      }
+    }
+    .switch.wide.checked small{
+      left: 72px
+    }
+    .switch.wide {
+      width: 102px;
+    }
+  }
+}
+
+
+
+
