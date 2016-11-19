@@ -13,6 +13,7 @@ import "angular/node_modules/angular-route/angular-route";
 import "angular/node_modules/angular-cookies/angular-cookies";
 import "angular/node_modules/angular-local-storage/dist/angular-local-storage";
 import "angular/node_modules/angular-ui-switch/angular-ui-switch";
+import "angular/node_modules/angular-bootstrap/ui-bootstrap-tpls";
 
 const MID = "restaurant-ui";
 
@@ -20,6 +21,7 @@ const MID = "restaurant-ui";
 const MODULE = angular.module(MID, [
     'ngSanitize',
     'ngRoute',
+    'ui.bootstrap',
     'ngCookies',
     'pascalprecht.translate',
     'LocalStorageModule',
