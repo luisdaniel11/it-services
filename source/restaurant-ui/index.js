@@ -6,14 +6,15 @@ import * as services from './all.service';
 import * as filters from './all.filters';
 import MainController from './config/MainController';
 
-import "angular/node_modules/angular-translate/dist/angular-translate";
-import "angular/node_modules/angular-sanitize/angular-sanitize";
-import "angular/node_modules/angular-translate/dist/angular-translate-loader-static-files/angular-translate-loader-static-files";
-import "angular/node_modules/angular-route/angular-route";
-import "angular/node_modules/angular-cookies/angular-cookies";
-import "angular/node_modules/angular-local-storage/dist/angular-local-storage";
-import "angular/node_modules/angular-ui-switch/angular-ui-switch";
-import "angular/node_modules/angular-bootstrap/ui-bootstrap-tpls-1.3.3";
+import "angular/lib/angular-translate/dist/angular-translate";
+import "angular/lib/angular-sanitize/angular-sanitize";
+import "angular/lib/angular-translate/dist/angular-translate-loader-static-files/angular-translate-loader-static-files";
+import "angular/lib/angular-route/angular-route";
+import "angular/lib/angular-cookies/angular-cookies";
+import "angular/lib/angular-local-storage/dist/angular-local-storage";
+import "angular/lib/angular-ui-switch/angular-ui-switch";
+import "angular/lib/angular-bootstrap/ui-bootstrap-tpls-1.3.3";
+import "angular/lib/angular-scroll/angular-scroll";
 
 const MID = "restaurant-ui";
 
@@ -23,6 +24,7 @@ const MODULE = angular.module(MID, [
     'ngRoute',
     'ui.bootstrap',
     'ngCookies',
+    'duScroll',
     'pascalprecht.translate',
     'LocalStorageModule',
     'uiSwitch'

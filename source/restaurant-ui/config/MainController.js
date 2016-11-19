@@ -1,7 +1,9 @@
 class MainController {
 
-    constructor($translate, $cookieStore, localStorageService) {
+    constructor($translate, $cookieStore, localStorageService, $anchorScroll, $location) {
         this.$translate = $translate;
+        this.$location = $location;
+        this.$anchorScroll = $anchorScroll;
         this.$cookieStore = $cookieStore;
         this.localStorageService = localStorageService;
         this.defaultLang = this.localStorageService.get('lang');
@@ -9,10 +11,16 @@ class MainController {
     }
 
     $onInit() {
-        this.items = [
-            'The first choice!',
-            'And another choice for you.',
-            'but wait! A third!'
+        this.menuItems = [
+            {name: 'welcome', link: 'top', active: true},
+            {name: 'about', link: 'story'},
+            {name: 'pricing', link: 'pricing'},
+            {name: 'beer', link: 'beer'},
+            {name: 'bread', link: 'bread'},
+            {name: 'featured', link: 'featured'},
+            {name: 'reservation', link: 'reservation'},
+            {name: 'contact', link: 'contact'},
+            {name: 'language', link: ''}
         ];
 
         this.status = {
@@ -25,11 +33,19 @@ class MainController {
         this.$translate.use(this.defaultLang);
     }
 
+    activeMenu(index) {
+        for (let item of this.menuItems) {
+            item.active = false;
+        }
+        this.menuItems[index].active = true;
+    }
+
     toggleLanguage() {
         this.defaultLang = this.languageSwitch ? 'en-us' : 'es-es';
         this.$translate.use(this.defaultLang);
         this.localStorageService.set('lang', this.defaultLang);
     }
+
     changeLanguage(lang) {
         this.defaultLang = lang;
         this.$translate.use(this.defaultLang);
@@ -46,5 +62,5 @@ class MainController {
         this.status.isopen = !this.status.isopen;
     }
 }
-MainController.$inject = ['$translate', '$cookieStore', 'localStorageService'];
+MainController.$inject = ['$translate', '$cookieStore', 'localStorageService', '$anchorScroll', '$location'];
 export default MainController;

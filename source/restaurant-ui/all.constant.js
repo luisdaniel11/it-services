@@ -1,5 +1,5 @@
 import serviceConfig from './config/service.config';
-import moment from 'angular/node_modules/moment/moment';
+import moment from 'angular/lib/moment/moment';
 
 export default {
     serviceConfig,

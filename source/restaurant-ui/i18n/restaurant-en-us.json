@@ -1,13 +1,9 @@
 {
-  "title": "It Services",
-  "getStarted": "Get Started",
-  "home": "Home",
-  "about": "About",
-  "services": "Services",
-  "tools": "Tools",
+  "title": "Restaurant",
+
   "contact": "Contact",
+  "welcome": "Welcome",
   "english": "ENGLISH",
-  "spanish": "SPANISH",
-  "webDesign": "Web Design"
+  "spanish": "SPANISH"
 
 }

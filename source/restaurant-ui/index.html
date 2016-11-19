@@ -18,7 +18,7 @@
     <link rel="icon" href="images/favicon-1.ico" type="image/x-icon">
 </head>
 
-<body data-ng-controller="MainController as $ctrl">
+<body data-ng-controller="MainController as $ctrl" class="ng-cloak" ng-cloak>
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -32,29 +32,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Restaurant</a>
-            </div>
-
-                </ul>
+                <a class="navbar-brand" href="#top">Restaurant</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav main-nav  clear navbar-right ">
-                    <li><a class="navactive color_animation" href="#top">WELCOME</a></li>
-                    <li><a class="color_animation" href="#story">ABOUT</a></li>
-                    <li><a class="color_animation" href="#pricing">PRICING</a></li>
-                    <li><a class="color_animation" href="#beer">BEER</a></li>
-                    <li><a class="color_animation" href="#bread">BREAD</a></li>
-                    <li><a class="color_animation" href="#featured">FEATURED</a></li>
-                    <li><a class="color_animation" href="#reservation">RESERVATION</a></li>
-                    <li><a class="color_animation" href="#contact">CONTACT</a></li>
-                    <li uib-dropdown is-open="$ctrl.status.isopen" ng-mouseover="$ctrl.status.isopen=true" ng-mouseleave="$ctrl.status.isopen=false">
-                        <a class="color_animation" href id="simple-dropdown" uib-dropdown-toggle>LANGUAGE</a>
-                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                            <li role="menuitem"><a href="" data-ng-click="$ctrl.toggleLanguage(es-es)">Spanish</a></li>
-                            <li role="menuitem"><a href="" data-ng-click="$ctrl.toggleLanguage(en-us)">English</a></li>
-                        </ul>
-                    </li>
+                    <li data-ng-repeat="item in $ctrl.menuItems">
+                        <a class="color_animation"
+                           href="#{{item.link}}"
+                           du-smooth-scroll duration="500"
+                           data-ng-class="{'navactive': item.active}"
+                           data-ng-click="$ctrl.activeMenu($index)">{{item.name|translate | uppercase}}</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -441,7 +429,7 @@
     var dojoConfig = {
         paths: {
             "angular/dist": "../../dist/restaurant-ui",
-            "angular/node_modules": "../../node_modules"
+            "angular/lib": "../../lib/restaurant-ui"
         },
         callback: function () {
 
@@ -455,9 +443,8 @@
 <script type="text/javascript" src="./../../lib/restaurant-ui/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="./../../lib/restaurant-ui/bootstrap.min.js"></script>
 <script type="text/javascript" src="./../../lib/restaurant-ui/jquery.mixitup.min.js"></script>
-<script type="text/javascript" src="./../../lib/restaurant-ui/main.js"></script>
 <!-- Angular -->
-<script src="../../node_modules/angular/angular.js"></script>
+<script src="../../lib/restaurant-ui/angular/angular.js"></script>
 <!-- Babel-Helpers -->
 <script src="../../lib/babel-helpers.js"></script>
 <!-- AMD LOADER -->
