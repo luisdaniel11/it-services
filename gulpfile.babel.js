@@ -92,17 +92,25 @@ gulp.task('test', ['clean'], () => runTests());
 
 gulp.task('statics', () => moveStaticFiles(paths.src.statics, paths.dist.statics));
 
-gulp.task('watch-dev', ["default"], () => gulp.watch("source/**/*", ["default"]));
+gulp.task('watch-dev', ["default"], () => gulp.watch("source/**/*", ["js", "sass", "statics"]));
 
 gulp.task("default", ["clean", "js", "sass", "statics"]);
 
 //IT Services(ìts)
-gulp.task("ìts:js", () => buildJS(paths.src.ìts.js, paths.dist.ìts.js));
-gulp.task('ìts:sass', () => buildSass(paths.src.ìts.sass, paths.dist.ìts.sass));
-gulp.task('ìts:html', () => moveStaticFiles(paths.src.ìts.html, paths.dist.ìts.html));
-gulp.task('ìts:i18n', () => moveStaticFiles(paths.src.ìts.i18n, paths.dist.ìts.i18n));
-gulp.task('ìts:images', () => moveStaticFiles(paths.src.ìts.images, paths.dist.ìts.images));
-gulp.task("ìts", ["clean", "ìts:js", "ìts:sass", "ìts:html", "ìts:i18n", "ìts:images"]);
+gulp.task("its:js", () => buildJS(paths.src.its.js, paths.dist.its.js));
+gulp.task('its:sass', () => buildSass(paths.src.its.sass, paths.dist.its.sass));
+gulp.task('its:html', () => moveStaticFiles(paths.src.its.html, paths.dist.its.html));
+gulp.task('its:i18n', () => moveStaticFiles(paths.src.its.i18n, paths.dist.its.i18n));
+gulp.task('its:images', () => moveStaticFiles(paths.src.its.images, paths.dist.its.images));
+gulp.task("its", ["clean", "its:js", "its:sass", "its:html", "its:i18n", "its:images"]);
+
+//IT Services(ìts)
+gulp.task("rt:js", () => buildJS(paths.src.rt.js, paths.dist.rt.js));
+gulp.task('rt:sass', () => buildSass(paths.src.rt.sass, paths.dist.rt.sass));
+gulp.task('rt:html', () => moveStaticFiles(paths.src.rt.html, paths.dist.rt.html));
+gulp.task('rt:i18n', () => moveStaticFiles(paths.src.rt.i18n, paths.dist.rt.i18n));
+gulp.task('rt:images', () => moveStaticFiles(paths.src.rt.images, paths.dist.rt.images));
+gulp.task("rt", ["clean", "rt:js", "rt:sass", "rt:html", "rt:i18n", "rt:images"]);
 
 
 gulp.task('webserver', () => {
