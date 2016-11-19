@@ -17,7 +17,7 @@
     <link rel="icon" href="images/favicon-1.ico" type="image/x-icon">
 </head>
 
-<body>
+<body data-ng-controller="MainController as $ctrl">
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -436,6 +436,7 @@
         callback: function () {
 
             require(["angular/dist/index", "dojo/domReady!"], function (index) {
+              debugger;
                 angular.bootstrap(document.body, [index.name]);
             });
         }
@@ -447,6 +448,11 @@
 <script type="text/javascript" src="./../../lib/restaurant-ui/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="./../../lib/restaurant-ui/jquery.mixitup.min.js"></script>
 <script type="text/javascript" src="./../../lib/restaurant-ui/main.js"></script>
-
+<!-- Angular -->
+<script src="../../node_modules/angular/angular.js"></script>
+<!-- Babel-Helpers -->
+<script src="../../lib/babel-helpers.js"></script>
+<!-- AMD LOADER -->
+<script src="../../node_modules/dojo/dojo.js"></script>
 </body>
 </html>
