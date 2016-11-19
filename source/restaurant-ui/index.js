@@ -13,7 +13,7 @@ import "angular/node_modules/angular-route/angular-route";
 import "angular/node_modules/angular-cookies/angular-cookies";
 import "angular/node_modules/angular-local-storage/dist/angular-local-storage";
 import "angular/node_modules/angular-ui-switch/angular-ui-switch";
-import "angular/node_modules/angular-bootstrap/ui-bootstrap-tpls";
+import "angular/node_modules/angular-bootstrap/ui-bootstrap-tpls-1.3.3";
 
 const MID = "restaurant-ui";
 

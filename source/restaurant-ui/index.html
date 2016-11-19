@@ -34,17 +34,26 @@
                 <a class="navbar-brand" href="#">Restaurant</a>
             </div>
 
+                </ul>
+            </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav main-nav  clear navbar-right ">
                     <li><a class="navactive color_animation" href="#top">WELCOME</a></li>
-                    <li><a class="color_animation" href="#story" uib-tooltip="pepe">ABOUT</a></li>
+                    <li><a class="color_animation" href="#story">ABOUT</a></li>
                     <li><a class="color_animation" href="#pricing">PRICING</a></li>
                     <li><a class="color_animation" href="#beer">BEER</a></li>
                     <li><a class="color_animation" href="#bread">BREAD</a></li>
                     <li><a class="color_animation" href="#featured">FEATURED</a></li>
                     <li><a class="color_animation" href="#reservation">RESERVATION</a></li>
                     <li><a class="color_animation" href="#contact">CONTACT</a></li>
+                    <li uib-dropdown is-open="$ctrl.status.isopen" ng-mouseover="$ctrl.status.isopen=true" ng-mouseleave="$ctrl.status.isopen=false">
+                        <a class="color_animation" href id="simple-dropdown" uib-dropdown-toggle>LANGUAGE</a>
+                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                            <li role="menuitem"><a href="" data-ng-click="$ctrl.toggleLanguage(es-es)">Spanish</a></li>
+                            <li role="menuitem"><a href="" data-ng-click="$ctrl.toggleLanguage(en-us)">English</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -436,7 +445,6 @@
         callback: function () {
 
             require(["angular/dist/index", "dojo/domReady!"], function (index) {
-              debugger;
                 angular.bootstrap(document.body, [index.name]);
             });
         }
